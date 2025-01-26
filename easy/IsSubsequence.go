@@ -24,15 +24,6 @@ Constraints:
 s and t consist only of lowercase English letters.
 */
 
-func findIndex(targetStr string, searchStr string) int {
-	for i, str := range targetStr {
-		if string(str) == string(searchStr) {
-			return i
-		}
-	}
-	return -1
-}
-
 func isSubsequence(s string, t string) bool {
 	for _, str := range s {
 		if findIndex(t, string(str)) == -1 {

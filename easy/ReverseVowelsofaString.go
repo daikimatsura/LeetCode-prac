@@ -41,15 +41,6 @@ func reverseVowels(s string) string {
 	return string(sBytes)
 }
 
-func includes(slice []string, element string) bool {
-	for _, v := range slice {
-		if v == element {
-			return true
-		}
-	}
-	return false
-}
-
 func getVowels(s string) string {
 	var result string
 	for _, str := range s {
