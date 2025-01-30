@@ -25,11 +25,13 @@ s and t consist only of lowercase English letters.
 */
 
 func isSubsequence(s string, t string) bool {
+	tRunes := []rune(t)
 	for _, str := range s {
-		if findIndex(t, string(str)) == -1 {
+		index := findIndex(tRunes, rune(str))
+		if index == -1 {
 			return false
 		} else {
-			t = t[findIndex(t, string(str))+1:]
+			tRunes = tRunes[index+1:]
 		}
 	}
 	return true
