@@ -30,3 +30,21 @@ func findCount[T comparable](arr []T, target T) int {
 	}
 	return count
 }
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+func findMinIndex(arr []int) int {
+	min := arr[0]
+	minIndex := 0
+	for i, v := range arr {
+		if v < min {
+			min = v
+			minIndex = i
+		}
+	}
+	return minIndex
+}
