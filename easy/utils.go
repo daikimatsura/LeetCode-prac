@@ -48,3 +48,13 @@ func findMinIndex(arr []int) int {
 	}
 	return minIndex
 }
+
+func filter[T comparable](arr []T, condition func(T) bool) []T {
+	result := []T{}
+	for _, v := range arr {
+		if condition(v) {
+			result = append(result, v)
+		}
+	}
+	return result
+}
