@@ -37,6 +37,25 @@ func min(a, b int) int {
 	return b
 }
 
+func maxBuyArray(arr []int) int {
+	max := arr[0]
+	for _, v := range arr {
+		if v > max {
+			max = v
+		}
+	}
+	return max
+}
+
+func minBuyArray(arr []int) int {
+	min := arr[0]
+	for _, v := range arr {
+		if v < min {
+			min = v
+		}
+	}
+	return min
+}
 func findMinIndex(arr []int) int {
 	min := arr[0]
 	minIndex := 0
